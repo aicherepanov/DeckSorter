@@ -1,7 +1,10 @@
 using DeckSorter.App.Services;
+using DeckSorter.DataAccess;
+using DeckSorter.Domain.Repositories;
 using DeckSorter.Domain.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,6 +24,9 @@ namespace DeckSorter.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IDecksService, DecksService>();
+            services.AddTransient<IDecksRepository, DecksRepository>();
+            services.AddDbContext<DecksContext>(x =>
+                x.UseSqlServer(Configuration.GetConnectionString("DecksContext")));
             services.AddControllers();
         }
 
