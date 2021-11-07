@@ -1,5 +1,5 @@
 ﻿using DeckSorter.Api.ResourceModels;
-using DeckSorter.Api.Services;
+using DeckSorter.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DeckSorter.Api.Controllers

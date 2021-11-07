@@ -3,14 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckSorter.Api", "DeckSorter.Api\DeckSorter.Api.csproj", "{93F208BE-523C-4D45-86AB-F46868BAB480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeckSorter.Api", "DeckSorter.Api\DeckSorter.Api.csproj", "{93F208BE-523C-4D45-86AB-F46868BAB480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckSorter.Tests", "DeckSorter.Tests\DeckSorter.Tests.csproj", "{729046E3-9FBD-45AC-9D2D-ECF451F2BEBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeckSorter.Tests", "DeckSorter.Tests\DeckSorter.Tests.csproj", "{729046E3-9FBD-45AC-9D2D-ECF451F2BEBA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{11CC627D-87CC-400B-81C3-864B1F02FCFB}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckSorter.App", "DeckSorter.App\DeckSorter.App.csproj", "{6294C12B-1F6A-467E-A0F3-61B84CD99122}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckSorter.Domain", "DeckSorter.Domain\DeckSorter.Domain.csproj", "{17F84183-101F-495E-A63F-002AF9048E0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckSorter.DataAccess", "DeckSorter.DataAccess\DeckSorter.DataAccess.csproj", "{9CE05955-082A-4937-8728-FB545CFD8E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +32,18 @@ Global
 		{729046E3-9FBD-45AC-9D2D-ECF451F2BEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{729046E3-9FBD-45AC-9D2D-ECF451F2BEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{729046E3-9FBD-45AC-9D2D-ECF451F2BEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6294C12B-1F6A-467E-A0F3-61B84CD99122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6294C12B-1F6A-467E-A0F3-61B84CD99122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6294C12B-1F6A-467E-A0F3-61B84CD99122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6294C12B-1F6A-467E-A0F3-61B84CD99122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F84183-101F-495E-A63F-002AF9048E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F84183-101F-495E-A63F-002AF9048E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F84183-101F-495E-A63F-002AF9048E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F84183-101F-495E-A63F-002AF9048E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE05955-082A-4937-8728-FB545CFD8E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE05955-082A-4937-8728-FB545CFD8E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE05955-082A-4937-8728-FB545CFD8E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE05955-082A-4937-8728-FB545CFD8E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,10 +1,10 @@
-﻿namespace DeckSorter.Api.Models
+﻿namespace DeckSorter.Domain.Models
 {
     public enum Suits
     {
         Clubs = 0,
         Diamonds = 1,
-        Hearts = 2, 
+        Hearts = 2,
         Spades = 3
     }
 }

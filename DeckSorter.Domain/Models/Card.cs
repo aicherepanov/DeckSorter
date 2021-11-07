@@ -1,4 +1,4 @@
-﻿namespace DeckSorter.Api.Models
+﻿namespace DeckSorter.Domain.Models
 {
     public class Card
     {

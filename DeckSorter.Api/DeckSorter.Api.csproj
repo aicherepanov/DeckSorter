@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DeckSorter.App\DeckSorter.App.csproj" />
+    <ProjectReference Include="..\DeckSorter.DataAccess\DeckSorter.DataAccess.csproj" />
+  </ItemGroup>
+
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using DeckSorter.Api.Services;
+﻿using DeckSorter.App.Services;
 using NUnit.Framework;
 
 namespace DeckSorter.Tests

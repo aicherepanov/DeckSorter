@@ -1,7 +1,7 @@
-﻿using DeckSorter.Api.Models;
+﻿using DeckSorter.Domain.Models;
 using System.Collections.Generic;
 
-namespace DeckSorter.Api.Services
+namespace DeckSorter.Domain.Services
 {
     public interface IDecksService
     {
