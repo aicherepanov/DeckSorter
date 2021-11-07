@@ -1,4 +1,6 @@
 ﻿using DeckSorter.App.Services;
+using DeckSorter.Domain.Repositories;
+using Moq;
 using NUnit.Framework;
 
 namespace DeckSorter.Tests
@@ -9,10 +11,11 @@ namespace DeckSorter.Tests
         public void GetDeckByName_ShouldReturnDeck(string deckName)
         {
             // arrange
-            var service = new DecksService();
+            var deckRepositoryMock = new Mock<IDecksRepository>();
+            var service = new DecksService(deckRepositoryMock.Object);
 
             // act
-            var result = service.GetDeckByName(deckName);
+            var result = service.GetDeck(deckName);
 
             // assert
             Assert.IsNotNull(result);
@@ -21,4 +24,5 @@ namespace DeckSorter.Tests
             Assert.IsNotNull(result.Cards);          
         }
     }
+
 }

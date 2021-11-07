@@ -18,7 +18,7 @@ namespace DeckSorter.Api.Controllers
         [HttpGet]
         public ActionResult<bool> GetDeckByName(GetDeckRequest request)
         {         
-            return Ok(_decksService.GetDeckByName(request.Name).Name);
+            return Ok(_decksService.GetDeck(request.Name).Name);
         }
     }
 }

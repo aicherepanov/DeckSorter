@@ -7,6 +7,6 @@ namespace DeckSorter.Domain.Services
     {
         List<Deck> Decks { get; }
 
-        Deck GetDeckByName(string deckName);
+        Deck GetDeck(string deckName);
     }
 }
