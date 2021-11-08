@@ -24,8 +24,7 @@ namespace DeckSorter.Api.Controllers
             return Ok(_decksService.Get(request.Name));
         }
 
-        [HttpGet]
-        //[Route("api/[controller]/getDecksList")]
+        [HttpGet("getDecksList")]        
         public ActionResult<List<string>> GetDecksList()
         {
             return Ok(_decksService.GetDecksList());
@@ -46,6 +45,20 @@ namespace DeckSorter.Api.Controllers
                 {
                     return BadRequest();
                 }
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpPost("shuffle")]
+        public ActionResult<bool> ShuffleDeck(ShuffleDeckRequest request)
+        {
+            try
+            {
+                _decksService.ShuffleDeck(request.Name);
+                return Ok("deck shuffled");
             }
             catch
             {

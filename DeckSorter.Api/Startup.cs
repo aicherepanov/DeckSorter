@@ -25,6 +25,7 @@ namespace DeckSorter.Api
         {
             services.AddTransient<IDecksService, DecksService>();
             services.AddTransient<IDecksRepository, DecksRepository>();
+            services.AddScoped<IShufflerService, SorterService>();
             services.AddDbContext<DecksContext>(x =>
                 x.UseSqlServer(Configuration.GetConnectionString("DecksContext")));
             services.AddControllers();

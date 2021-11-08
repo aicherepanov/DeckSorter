@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DeckSorter.App\DeckSorter.App.csproj" />
     <ProjectReference Include="..\DeckSorter.DataAccess\DeckSorter.DataAccess.csproj" />
+    <ProjectReference Include="..\DeckSorter.Domain\DeckSorter.Domain.csproj" />
   </ItemGroup>
 
 

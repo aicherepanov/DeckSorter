@@ -10,10 +10,12 @@ namespace DeckSorter.App.Services
     public class DecksService : IDecksService
     {
         private readonly IDecksRepository _decksRepository;
+        private readonly IShufflerService _shufflerService;
 
-        public DecksService(IDecksRepository decksRepository)
+        public DecksService(IDecksRepository decksRepository, IShufflerService shufflerService)
         {
             _decksRepository = decksRepository;
+            _shufflerService = shufflerService;
             Decks = new List<Deck>();
         }
 
@@ -52,7 +54,7 @@ namespace DeckSorter.App.Services
             return _decksRepository.GetDecksList().Select(d => d.DeckName).ToList();
         }
 
-        public void ShuffleDeck(Deck deck)
+        public void ShuffleDeck(string name)
         {
             throw new System.NotImplementedException();
         }

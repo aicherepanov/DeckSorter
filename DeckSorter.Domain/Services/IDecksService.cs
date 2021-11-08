@@ -10,7 +10,7 @@ namespace DeckSorter.Domain.Services
         bool Create(string name);
         void UpdateDeck(Deck deck);
         void Delete(string deck);
-        void ShuffleDeck(Deck deck);
+        void ShuffleDeck(string name);
         List<string> GetDecksList();
     }
 }
