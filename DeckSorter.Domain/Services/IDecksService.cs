@@ -6,10 +6,10 @@ namespace DeckSorter.Domain.Services
     public interface IDecksService
     {
         List<Deck> Decks { get; }
-        Deck GetDeck(string name);
+        Deck Get(string name);
         bool Create(string name);
         void UpdateDeck(Deck deck);
-        void DeleteDeck(Deck deck);
+        void Delete(string deck);
         void ShuffleDeck(Deck deck);
     }
 }

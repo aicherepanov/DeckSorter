@@ -15,7 +15,7 @@ namespace DeckSorter.Tests
             var service = new DecksService(deckRepositoryMock.Object);
 
             // act
-            var result = service.GetDeck(deckName);
+            var result = service.Get(deckName);
 
             // assert
             Assert.IsNotNull(result);

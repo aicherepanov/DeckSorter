@@ -36,26 +36,14 @@ namespace DeckSorter.App.Services
             }
         }
 
-        public void DeleteDeck(Deck deck)
+        public void Delete(string name)
         {
-            throw new System.NotImplementedException();
+            _decksRepository.Delete(Get(name));
         }
 
-        public Deck GetDeck(string deckName)
+        public Deck Get(string name)
         {
-            var result = _decksRepository.Get(deckName);
-
-            if (result == null || result.Cards.Count == 0)
-            {
-                return new Deck
-                {
-                    DeckName = deckName
-                };
-            }
-            return new Deck
-            {
-                DeckName = deckName
-            };
+            return _decksRepository.Get(name);
         }
 
         public void ShuffleDeck(Deck deck)

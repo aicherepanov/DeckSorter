@@ -11,5 +11,6 @@ namespace DeckSorter.Domain.Models
         public Ranks Rank { get; set; }
         [Required]
         public int Index { get; set; }
+        public int DeckId { get; set; }
     }
 }

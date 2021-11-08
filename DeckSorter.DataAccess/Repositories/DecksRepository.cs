@@ -31,18 +31,38 @@ namespace DeckSorter.DataAccess
 
         public void Delete(Deck deck)
         {
-            throw new System.NotImplementedException();
+            var deckToRemove = new Entities.Deck
+            {               
+                DeckName = deck.DeckName,
+                DeckID = deck.DeckId
+            };
+            foreach (Card card in deck.Cards)
+            {
+                deckToRemove.Cards.Add(new Entities.Card() { CardID = card.CardId, Suit = card.Suit, Rank = card.Rank, Index = card.Index });
+            }
+            _context.Cards.RemoveRange(deckToRemove.Cards);
+            _context.Decks.Remove(deckToRemove);                      
+            _context.SaveChanges();
         }
 
         public Deck Get(string name)
         {
             var deck = _context.Decks.FirstOrDefault(x => x.DeckName == name);
+            _context.Entry(deck).Collection(x => x.Cards).Load();
 
-            return new Deck
+            var cards = deck.Cards;
+            
+            var domainDeck = new Deck
             {
                 DeckId = deck.DeckID,
                 DeckName = deck.DeckName
             };
+            foreach (Entities.Card card in cards)
+            {
+                domainDeck.Cards.Add(new Card() { DeckId = deck.DeckID, CardId = card.CardID, Suit = card.Suit, Rank = card.Rank, Index = card.Index });
+            }
+
+            return domainDeck;
         }
 
         public IEnumerable<Deck> GetDecksList()
