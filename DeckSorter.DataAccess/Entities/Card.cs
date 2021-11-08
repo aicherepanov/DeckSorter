@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DeckSorter.Domain.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DeckSorter.DataAccess.Entities
@@ -7,8 +8,8 @@ namespace DeckSorter.DataAccess.Entities
     {
         [Key]
         public int CardID { get; set; }
-        public int Suit { get; set; }
-        public int Rank { get; set; }
+        public Suits Suit { get; set; }
+        public Ranks Rank { get; set; }
         public int Index { get; set; }
     }
 }

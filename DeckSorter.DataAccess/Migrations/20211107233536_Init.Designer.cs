@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DeckSorter.DataAccess.Migrations
 {
     [DbContext(typeof(DecksContext))]
-    [Migration("20211107220018_Init")]
+    [Migration("20211107233536_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

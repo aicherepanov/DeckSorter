@@ -6,10 +6,10 @@ namespace DeckSorter.Domain.Repositories
     public interface IDecksRepository
     {
         IEnumerable<Deck> GetDecksList();
-        Deck GetDeck(string name);
-        void CreateDeck(Deck deck);
-        void UpdateDeck(Deck deck);
-        void DeleteDeck(Deck deck);
-        void ShuffleDeck(Deck deck);
+        Deck Get(string name);
+        void Create(Deck deck);
+        void Update(Deck deck);
+        void Delete(Deck deck);
+        void Shuffle(Deck deck);
     }
 }

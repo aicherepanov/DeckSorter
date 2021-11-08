@@ -19,7 +19,7 @@ namespace DeckSorter.Tests
 
             // assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(deckName, result.Name);
+            Assert.AreEqual(deckName, result.DeckName);
 
             Assert.IsNotNull(result.Cards);          
         }
