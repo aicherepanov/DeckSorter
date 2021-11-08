@@ -3,6 +3,7 @@ using DeckSorter.Domain.Repositories;
 using DeckSorter.Domain.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DeckSorter.App.Services
 {
@@ -44,6 +45,11 @@ namespace DeckSorter.App.Services
         public Deck Get(string name)
         {
             return _decksRepository.Get(name);
+        }
+
+        public List<string> GetDecksList()
+        {
+            return _decksRepository.GetDecksList().Select(d => d.DeckName).ToList();
         }
 
         public void ShuffleDeck(Deck deck)

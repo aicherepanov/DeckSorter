@@ -1,7 +1,9 @@
 ﻿using DeckSorter.Api.ResourceModels;
+using DeckSorter.Domain.Models;
 using DeckSorter.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace DeckSorter.Api.Controllers
 {
@@ -20,6 +22,13 @@ namespace DeckSorter.Api.Controllers
         public ActionResult<bool> GetDeck(GetDeckRequest request)
         {
             return Ok(_decksService.Get(request.Name));
+        }
+
+        [HttpGet]
+        //[Route("api/[controller]/getDecksList")]
+        public ActionResult<List<string>> GetDecksList()
+        {
+            return Ok(_decksService.GetDecksList());
         }
 
         [HttpPost]

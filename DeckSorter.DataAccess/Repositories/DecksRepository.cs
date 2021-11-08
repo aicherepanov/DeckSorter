@@ -65,9 +65,15 @@ namespace DeckSorter.DataAccess
             return domainDeck;
         }
 
-        public IEnumerable<Deck> GetDecksList()
-        {
-            throw new System.NotImplementedException();
+        public IEnumerable<Deck> GetDecksList()        {
+            
+            var decks = _context.Decks;
+            var decksList = new List<Deck>();
+            foreach (Entities.Deck deck in decks)
+            {
+                decksList.Add(Get(deck.DeckName));
+            }
+            return decksList;
         }
 
         public void Shuffle(Deck deck)

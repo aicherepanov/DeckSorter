@@ -11,5 +11,6 @@ namespace DeckSorter.Domain.Services
         void UpdateDeck(Deck deck);
         void Delete(string deck);
         void ShuffleDeck(Deck deck);
+        List<string> GetDecksList();
     }
 }
